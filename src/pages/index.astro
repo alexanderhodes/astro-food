@@ -2,20 +2,20 @@
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 
-const recipes: { name: string; img: string }[] = [
-  { name: "Bowl", img: "bowl" },
-  { name: "Couscous", img: "couscous" },
-  { name: "Kichererbsen", img: "kichererbsen" },
-  { name: "Lunch", img: "lunch" },
-  { name: "Salat", img: "salad" },
-  { name: "Süßkartoffeln", img: "sweet-potatoes" },
+const recipes: { name: string; id: string }[] = [
+  { name: "Bowl", id: "bowl" },
+  { name: "Couscous", id: "couscous" },
+  { name: "Kichererbsen", id: "kichererbsen" },
+  { name: "Lunch", id: "lunch" },
+  { name: "Salat", id: "salad" },
+  { name: "Süßkartoffeln", id: "sweet-potatoes" },
 ];
 ---
 
 <Layout title="Food blog">
   <main class="max-w-screen-lg mx-auto">
     <div class="flex flex-wrap justify-start my-5">
-      {recipes.map(({ name, img }) => <Card name={name} img={img} />)}
+      {recipes.map(({ name, id }) => <Card id={id} name={name} img={id} />)}
     </div>
   </main>
 </Layout>
